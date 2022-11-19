@@ -40,7 +40,7 @@ public class Controller {
         }
     }
 
-    @GetMapping("/test")
+    @GetMapping("/fullstudent")
     public ResponseEntity getUsers() {
         try {
             //return  ResponseEntity.ok("Сервер работает!");

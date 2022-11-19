@@ -10,6 +10,12 @@ public class studentEntity {
     private String name;
     private String surname;
 
+    @ManyToOne
+    @JoinColumn(name = "faculty_id")
+    private Faculty facultys;
+
+    public studentEntity(){}
+
     public Long getStudent_card_id() {
         return student_card_id;
     }
@@ -28,10 +34,11 @@ public class studentEntity {
         this.patronymic = patronymic;
     }
 
-    public studentEntity(Long student_card_id, String name, String surname, String patronymic) {
+    public studentEntity(Long student_card_id, String name, String surname, Faculty facultys, String patronymic) {
         this.student_card_id = student_card_id;
         this.name = name;
         this.surname = surname;
+        this.facultys = facultys;
         this.patronymic = patronymic;
     }
 
@@ -43,13 +50,15 @@ public class studentEntity {
         return patronymic;
     }
 
-    public studentEntity() {
+    public studentEntity(Faculty facultys) {
 
+        this.facultys = facultys;
     }
 
 
-    public studentEntity(String name) {
+    public studentEntity(String name, Faculty facultys) {
         this.name = name;
+        this.facultys = facultys;
     }
 
     public void setName(String name) {
