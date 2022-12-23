@@ -1,0 +1,21 @@
+ /*@PostMapping
+    public ResponseEntity createTodo(@RequestBody Faculty todo,
+                                     @RequestParam Long userId) {
+        try {
+            return ResponseEntity.ok(todoService.createTodo(todo, userId));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Произошла ошибка");
+        }
+    }
+
+    @PutMapping
+    public ResponseEntity completeTodo(@RequestParam Long id) {
+        try {
+            return ResponseEntity.ok(todoService.complete(id));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Произошла ошибка");
+        }
+    }*/
+
+    // @Autowired
+        //private TodoService todoService;

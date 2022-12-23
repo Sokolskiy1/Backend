@@ -14,7 +14,20 @@ public class Faculty {
     @OneToMany(mappedBy = "facultys")
     private List<studentEntity> todos;
 
+    @OneToMany(mappedBy = "faculty_id")
+    private List<departament> departament;
+
+    public List<com.example.backendPP.entity.departament> getDepartament() {
+        return departament;
+    }
+
+    public void setDepartament(List<com.example.backendPP.entity.departament> departament) {
+        this.departament = departament;
+    }
+
+
     public Faculty(){}
+
     public Long getId() {
         return id;
     }
@@ -40,4 +53,11 @@ public class Faculty {
     }
 
 
+    public List<studentEntity> getTodos() {
+        return todos;
+    }
+
+    public void setTodos(List<studentEntity> todos) {
+        this.todos = todos;
+    }
 }
